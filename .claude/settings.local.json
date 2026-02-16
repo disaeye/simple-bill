@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\":*)",
+      "Bash(xxd:*)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:apexcharts.com)",
+      "mcp__MiniMax__web_search",
+      "Bash(lsof:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(set:*)",
+      "Bash(cmd /c \"set CLAUDECODE=& claude mcp list\":*)",
+      "Bash(cmd /c:*)",
+      "Bash(powershell:*)",
+      "Bash(uvx minimax-coding-plan-mcp:*)"
+    ]
+  }
+}
