@@ -23,7 +23,7 @@
 
 ### 在线演示
 
-访问：[https://simple-bill.vercel.app](https://simple-bill.vercel.app)
+访问：[https://simple-bill-demo.vercel.app](https://simple-bill-demo.vercel.app)
 
 ### 本地运行
 
