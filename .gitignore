@@ -28,3 +28,4 @@ Thumbs.db
 server.log
 nul
 expense-tracker/
+.vercel
