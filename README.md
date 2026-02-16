@@ -1,6 +1,6 @@
 # Simple Bill - Expense Tracker
 
-[中文说明](readme-cn.md) | [English](README.md)
+[中文说明](README-CN.md) | [English](README.md)
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
