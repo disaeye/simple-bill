@@ -23,7 +23,7 @@
 
 ### Online Demo
 
-Visit: [https://simple-bill.vercel.app](https://simple-bill.vercel.app)
+Visit: [https://simple-bill-demo.vercel.app](https://simple-bill-demo.vercel.app)
 
 ### Local Development
 
