@@ -18,32 +18,39 @@
                         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                     </svg>
                 </div>
-                <h1 class="title">支出记账本</h1>
+                <h1 class="title" data-i18n="app.title">支出记账本</h1>
             </div>
             <div class="header-right">
-                <button class="btn btn-secondary" id="exportBtn">
+                <button class="btn btn-icon" id="langToggleBtn" title="Language / 语言">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </button>
+                <button class="btn btn-secondary" id="exportBtn" data-i18n="btn.export">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    <span>导出</span>
+                    <span data-i18n="btn.export">导出</span>
                 </button>
-                <button class="btn btn-secondary" id="importBtn">
+                <button class="btn btn-secondary" id="importBtn" data-i18n="btn.import">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="17 8 12 3 7 8"/>
                         <line x1="12" y1="3" x2="12" y2="15"/>
                     </svg>
-                    <span>导入</span>
+                    <span data-i18n="btn.import">导入</span>
                 </button>
-                <button class="btn btn-secondary" id="selectDataBtn">
+                <button class="btn btn-secondary" id="selectDataBtn" data-i18n="btn.selectData">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
                     </svg>
-                    <span>本地目录</span>
+                    <span data-i18n="btn.selectData">本地目录</span>
                 </button>
-                <button class="btn btn-icon" id="refreshBtn" title="刷新数据">
+                <button class="btn btn-icon" id="refreshBtn" title="Refresh" data-i18n-title="btn.refresh">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M23 4v6h-6M1 20v-6h6"/>
                         <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
@@ -56,17 +63,17 @@
         <section class="filter-bar">
             <div class="filter-bar-inner">
                 <div class="filter-group-main">
-                    <label class="filter-label">统计维度</label>
+                    <label class="filter-label" data-i18n="filter.dimension">统计维度</label>
                     <select id="dimension" class="select-input filter-select-main">
-                        <option value="month">按月</option>
-                        <option value="year">按年</option>
-                        <option value="quarter">按季度</option>
-                        <option value="week">按周</option>
-                        <option value="all">全部</option>
+                        <option value="month" data-i18n="dimension.month">按月</option>
+                        <option value="year" data-i18n="dimension.year">按年</option>
+                        <option value="quarter" data-i18n="dimension.quarter">按季度</option>
+                        <option value="week" data-i18n="dimension.week">按周</option>
+                        <option value="all" data-i18n="dimension.all">全部</option>
                     </select>
                 </div>
                 <div class="filter-group-main" id="billingDaySection">
-                    <label class="filter-label">出账日</label>
+                    <label class="filter-label" data-i18n="filter.billingDay">出账日</label>
                     <select id="billingDay" class="select-input filter-select-main">
                         <option value="1">1 日</option>
                         <option value="2">2 日</option>
@@ -99,15 +106,15 @@
                     </select>
                 </div>
                 <div class="filter-group-main" id="periodSection">
-                    <label class="filter-label" id="periodTitle">选择月份</label>
+                    <label class="filter-label" id="periodTitle" data-i18n="filter.period">选择月份</label>
                     <select id="periodSelect" class="select-input filter-select-main">
                         <!-- 动态生成选项 -->
                     </select>
                 </div>
                 <div class="filter-group-main">
-                    <label class="filter-label">分类</label>
+                    <label class="filter-label" data-i18n="filter.category">分类</label>
                     <select id="categoryFilter" class="select-input filter-select-main">
-                        <option value="">全部</option>
+                        <option value="" data-i18n="filter.all">全部</option>
                     </select>
                 </div>
             </div>
@@ -295,6 +302,7 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs@5.1.0/dist/gridjs.production.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+    <script src="js/i18n.js"></script>
     <script src="js/data.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/ui.js"></script>
