@@ -1356,3 +1356,295 @@ body {
         display: block !important;
     }
 }
+
+/* ========================================
+   增强的手机端自适应
+   ======================================== */
+
+/* 手机端基础设置 */
+@media (max-width: 480px) {
+    :root {
+        --space-xs: 4px;
+        --space-sm: 8px;
+        --space-md: 12px;
+        --space-lg: 16px;
+        --space-xl: 20px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .app-container {
+        padding: var(--space-sm);
+    }
+    
+    /* Header */
+    .header {
+        padding: var(--space-md);
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+    
+    .header-left {
+        gap: var(--space-sm);
+    }
+    
+    .title {
+        font-size: 1.125rem;
+    }
+    
+    .header-actions {
+        gap: var(--space-sm);
+    }
+    
+    .btn {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.75rem;
+    }
+    
+    /* 筛选栏 */
+    .filter-bar {
+        padding: var(--space-sm);
+    }
+    
+    .filter-bar-inner {
+        gap: var(--space-sm);
+    }
+    
+    .filter-group-main {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+    
+    .filter-label {
+        font-size: 0.75rem;
+        min-width: 50px;
+    }
+    
+    .filter-select-main {
+        min-width: 100%;
+        flex: 1 1 100%;
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.875rem;
+    }
+    
+    /* 统计卡片 */
+    .stats-section {
+        margin-top: var(--space-sm);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+    
+    .stat-card {
+        padding: var(--space-sm);
+        gap: var(--space-sm);
+    }
+    
+    .stat-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .stat-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .stat-content {
+        gap: 2px;
+    }
+    
+    .stat-label {
+        font-size: 0.625rem;
+    }
+    
+    .stat-value {
+        font-size: 0.875rem;
+    }
+    
+    .stat-change {
+        font-size: 0.625rem;
+    }
+    
+    /* 图表 */
+    .charts-section {
+        margin-top: var(--space-sm);
+    }
+    
+    .charts-grid {
+        gap: var(--space-sm);
+    }
+    
+    .chart-card {
+        padding: var(--space-sm);
+    }
+    
+    .chart-header {
+        margin-bottom: var(--space-sm);
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+    
+    .chart-title {
+        font-size: 0.875rem;
+    }
+    
+    .chart-container {
+        height: 200px !important;
+    }
+    
+    .chart-container > div {
+        height: 200px !important;
+    }
+    
+    /* 分类返回按钮 */
+    .category-back-btn {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.75rem;
+    }
+    
+    /* 表格 */
+    .expense-section {
+        margin-top: var(--space-sm);
+    }
+    
+    .expense-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .expense-table thead th,
+    .expense-table tbody td {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+    
+    .expense-table .expense-amount {
+        font-size: 0.75rem;
+    }
+    
+    .expense-table .category-tag {
+        font-size: 0.625rem;
+        padding: 2px 4px;
+    }
+    
+    .expense-table .type-tag {
+        font-size: 0.625rem;
+        padding: 2px 4px;
+    }
+    
+    .btn-action {
+        padding: 2px;
+    }
+    
+    .btn-action svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* 操作按钮 */
+    .header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .header-actions .btn {
+        flex: 1;
+        text-align: center;
+    }
+    
+    /* 空状态 */
+    .empty-state {
+        padding: var(--space-xl);
+    }
+    
+    .empty-state svg {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .empty-state p {
+        font-size: 0.875rem;
+    }
+    
+    .empty-state span {
+        font-size: 0.75rem;
+    }
+    
+    /* 模态框 */
+    .modal {
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: var(--space-sm);
+    }
+    
+    .modal-header {
+        padding: var(--space-sm);
+    }
+    
+    .modal-title {
+        font-size: 1rem;
+    }
+    
+    .modal-body {
+        padding: var(--space-sm);
+    }
+    
+    .form-group {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .form-label {
+        font-size: 0.75rem;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.875rem;
+    }
+    
+    .modal-actions {
+        padding: var(--space-sm);
+        gap: var(--space-sm);
+    }
+    
+    .modal-actions .btn {
+        flex: 1;
+        padding: var(--space-sm);
+    }
+}
+
+/* 超小屏幕进一步优化 */
+@media (max-width: 360px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        height: 180px !important;
+    }
+    
+    .chart-container > div {
+        height: 180px !important;
+    }
+}
+
+/* 平板端优化 */
+@media (min-width: 481px) and (max-width: 768px) {
+    .chart-container {
+        height: 250px !important;
+    }
+    
+    .chart-container > div {
+        height: 250px !important;
+    }
+}
