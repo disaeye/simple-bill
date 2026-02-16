@@ -1,9 +1,13 @@
 # Simple Bill - Expense Tracker
 
-A modern, lightweight expense tracking web application built with vanilla JavaScript.
+[中文说明](readme-cn.md) | [English](README.md)
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+
+## Live Demo
+
+🌐 **Online Demo**: [https://simple-bill-demo.vercel.app](https://simple-bill-demo.vercel.app)
 
 ## Features
 

@@ -1,9 +1,13 @@
 # Simple Bill - 支出记账本
 
-一个现代化、轻量级的支出记账 Web 应用，使用原生 JavaScript 构建。
+[English](README.md) | [中文说明](readme-cn.md)
 
 ![版本](https://img.shields.io/badge/版本-1.0.0-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-green)
+
+## 在线演示
+
+🌐 **在线演示**: [https://simple-bill-demo.vercel.app](https://simple-bill-demo.vercel.app)
 
 ## 功能特点
 
