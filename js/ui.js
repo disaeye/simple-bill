@@ -174,6 +174,8 @@ const UIModule = (function() {
             // 重新渲染分类筛选器
             const categories = DataModule.getCategory1List();
             renderCategoryFilter(categories);
+            // 重新渲染出账日选项
+            renderBillingDayOptions();
         });
     }
 
@@ -286,6 +288,22 @@ const UIModule = (function() {
             elements.categoryFilter.onchange = function() {
                 FilterModule.setCategory(this.value);
             };
+        }
+    }
+
+    // 渲染出账日选项
+    function renderBillingDayOptions() {
+        if (elements.billingDay) {
+            const currentValue = elements.billingDay.value || '1';
+            elements.billingDay.innerHTML = '';
+            for (let i = 1; i <= 28; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                const daySuffix = I18nModule.t('date.day');
+                option.textContent = i + daySuffix;
+                elements.billingDay.appendChild(option);
+            }
+            elements.billingDay.value = currentValue;
         }
     }
 
@@ -509,6 +527,7 @@ const UIModule = (function() {
         showToast,
         updateStats,
         renderCategoryFilter,
+        renderBillingDayOptions,
         updatePeriodOptions,
         getTableFilters,
         renderExpenseList,

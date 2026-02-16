@@ -37,14 +37,7 @@ const ChartModule = (function() {
 
         // 语言切换事件
         document.addEventListener('languageChange', function() {
-            // 更新分类占比标题
-            const titleEl = document.querySelector('.chart-card:nth-child(2) .chart-title');
-            if (titleEl && categoryState.level === 0) {
-                titleEl.textContent = I18nModule.t('chart.category');
-            }
-            if (backBtn) {
-                backBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg><span>' + I18nModule.t('chart.backToCategory') + '</span>';
-            }
+            // 分类占比标题和返回按钮由 I18nModule.updateUI() 自动处理
         });
 
         // 响应式调整

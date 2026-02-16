@@ -75,34 +75,7 @@
                 <div class="filter-group-main" id="billingDaySection">
                     <label class="filter-label" data-i18n="filter.billingDay">出账日</label>
                     <select id="billingDay" class="select-input filter-select-main">
-                        <option value="1">1 日</option>
-                        <option value="2">2 日</option>
-                        <option value="3">3 日</option>
-                        <option value="4">4 日</option>
-                        <option value="5">5 日</option>
-                        <option value="6">6 日</option>
-                        <option value="7">7 日</option>
-                        <option value="8">8 日</option>
-                        <option value="9">9 日</option>
-                        <option value="10">10 日</option>
-                        <option value="11">11 日</option>
-                        <option value="12">12 日</option>
-                        <option value="13">13 日</option>
-                        <option value="14">14 日</option>
-                        <option value="15">15 日</option>
-                        <option value="16">16 日</option>
-                        <option value="17">17 日</option>
-                        <option value="18">18 日</option>
-                        <option value="19">19 日</option>
-                        <option value="20">20 日</option>
-                        <option value="21">21 日</option>
-                        <option value="22">22 日</option>
-                        <option value="23">23 日</option>
-                        <option value="24">24 日</option>
-                        <option value="25">25 日</option>
-                        <option value="26">26 日</option>
-                        <option value="27">27 日</option>
-                        <option value="28">28 日</option>
+                        <!-- 动态生成选项 -->
                     </select>
                 </div>
                 <div class="filter-group-main" id="periodSection">
@@ -186,12 +159,12 @@
                 </div>
                 <div class="chart-card">
                     <div class="chart-header">
-                        <h3 class="chart-title">分类占比</h3>
+                        <h3 class="chart-title" data-i18n="chart.category">分类占比</h3>
                         <div class="category-back-btn hidden" id="categoryBackBtn">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M19 12H5M12 19l-7-7 7-7"/>
                             </svg>
-                            <span>返回一级分类</span>
+                            <span data-i18n="chart.backToCategory">返回一级分类</span>
                         </div>
                     </div>
                     <div class="chart-container">
@@ -229,15 +202,15 @@
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
                             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
                         </svg>
-                        <p>暂无数据</p>
-                        <span>请先选择数据目录或添加支出记录</span>
+                        <p data-i18n="empty.title">暂无数据</p>
+                        <span data-i18n="empty.hint">请先选择数据目录或添加支出记录</span>
                     </div>
                 </div>
             </main>
         </section>
 
         <!-- Floating Action Button -->
-        <button class="fab" id="addExpenseBtn" title="添加支出">
+        <button class="fab" id="addExpenseBtn" data-i18n-title="btn.add" title="添加支出">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="12" y1="5" x2="12" y2="19"/>
                 <line x1="5" y1="12" x2="19" y2="12"/>
@@ -260,33 +233,33 @@
             <form class="modal-body" id="expenseForm">
                 <input type="hidden" id="expenseId" />
                 <div class="form-group">
-                    <label class="form-label">日期</label>
+                    <label class="form-label" data-i18n="modal.date">日期</label>
                     <input type="date" id="expenseDate" class="input" required />
                 </div>
                 <div class="form-group">
-                    <label class="form-label">金额</label>
-                    <input type="number" id="expenseAmount" class="input" step="0.01" placeholder="负数表示退款" required />
+                    <label class="form-label" data-i18n="modal.amount">金额</label>
+                    <input type="number" id="expenseAmount" class="input" step="0.01" data-i18n-placeholder="modal.enterAmount" placeholder="负数表示退款" required />
                 </div>
                 <div class="form-group">
-                    <label class="form-label">一级分类</label>
+                    <label class="form-label" data-i18n="modal.category1">一级分类</label>
                     <select id="expenseCategory1" class="select-input" required>
-                        <option value="">请选择</option>
+                        <option value="" data-i18n="modal.selectCategory">请选择</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">二级分类</label>
+                    <label class="form-label" data-i18n="modal.category2">二级分类</label>
                     <select id="expenseCategory2" class="select-input">
-                        <option value="">请选择</option>
+                        <option value="" data-i18n="modal.selectCategory">请选择</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">备注</label>
-                    <input type="text" id="expenseRemark" class="input" placeholder="可选" />
+                    <label class="form-label" data-i18n="modal.remark">备注</label>
+                    <input type="text" id="expenseRemark" class="input" data-i18n-placeholder="modal.remark" placeholder="可选" />
                 </div>
             </form>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" id="cancelBtn">取消</button>
-                <button type="submit" class="btn btn-primary" id="saveBtn">保存</button>
+                <button type="button" class="btn btn-secondary" id="cancelBtn" data-i18n="modal.cancel">取消</button>
+                <button type="submit" class="btn btn-primary" id="saveBtn" data-i18n="modal.save">保存</button>
             </div>
         </div>
     </div>
